@@ -23,11 +23,15 @@ body {
 }
 
 .top {
-  width: 95%;
+  width: 90%;
   height: 20%;
   margin-top: 10px;
   background-color: black;
   color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 40px;
 }
 
 .bottom {
@@ -48,4 +52,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.button:hover {
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
 }
