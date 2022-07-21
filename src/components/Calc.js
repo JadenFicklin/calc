@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Calc() {
   const [holdNum, setHoldNum] = useState("");
+  const [add, setAdd] = useState("");
 
   const addNumber = (num) => {
     setHoldNum(`${holdNum + num} `);
@@ -11,6 +12,10 @@ function Calc() {
     setHoldNum(``);
   };
 
+  const combine = () => {
+    console.log(holdNum);
+    setHoldNum(``);
+  };
   return (
     <>
       <div className="outer">
@@ -52,13 +57,17 @@ function Calc() {
             <div className="button three" onClick={() => addNumber(3)}>
               3
             </div>
-            <div className="button plus">+</div>
+            <div className="button plus" onClick={() => addNumber("+")}>
+              ++
+            </div>
             <div className="button empty"></div>
             <div className="button zero" onClick={() => addNumber(0)}>
               0
             </div>
             <div className="button period">.</div>
-            <div className="button equal">=</div>
+            <div className="button equal" onClick={() => combine()}>
+              =
+            </div>
           </div>
         </div>
       </div>
